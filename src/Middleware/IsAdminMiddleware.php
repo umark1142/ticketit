@@ -1,10 +1,10 @@
 <?php
 
-namespace Kordy\Ticketit\Middleware;
+namespace Umark\Ticketit\Middleware;
 
 use Closure;
-use Kordy\Ticketit\Models\Agent;
-use Kordy\Ticketit\Models\Setting;
+use Umark\Ticketit\Models\Agent;
+use Umark\Ticketit\Models\Setting;
 
 class IsAdminMiddleware
 {

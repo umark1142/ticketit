@@ -1,9 +1,9 @@
 <?php
 
-namespace Kordy\Ticketit\Models;
+namespace Umark\Ticketit\Models;
 
 use Illuminate\Database\Eloquent\Model as Model;
-use Kordy\Ticketit\Traits\ContentEllipse;
+use Umark\Ticketit\Traits\ContentEllipse;
 
 class Configuration extends Model
 {

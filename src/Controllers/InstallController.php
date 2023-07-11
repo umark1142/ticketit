@@ -1,6 +1,6 @@
 <?php
 
-namespace Kordy\Ticketit\Controllers;
+namespace Umark\Ticketit\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\User;
@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Kordy\Ticketit\Models\Agent;
-use Kordy\Ticketit\Models\Setting;
-use Kordy\Ticketit\Seeds\SettingsTableSeeder;
-use Kordy\Ticketit\Seeds\TicketitTableSeeder;
+use Umark\Ticketit\Models\Agent;
+use Umark\Ticketit\Models\Setting;
+use Umark\Ticketit\Seeds\SettingsTableSeeder;
+use Umark\Ticketit\Seeds\TicketitTableSeeder;
 
 class InstallController extends Controller
 {
@@ -31,7 +31,7 @@ class InstallController extends Controller
         $assets = $this->allFilesList(base_path('vendor/kordy/ticketit/src/Public'));
         if ($public !== $assets) {
             Artisan::call('vendor:publish', [
-                '--provider' => 'Kordy\\Ticketit\\TicketitServiceProvider',
+                '--provider' => 'Umark\\Ticketit\\TicketitServiceProvider',
                 '--tag'      => ['public'],
             ]);
         }
@@ -118,7 +118,7 @@ class InstallController extends Controller
         $inactive_migrations = $this->inactiveMigrations();
         if ($inactive_migrations) { // If a migration is missing, do the migrate
             Artisan::call('vendor:publish', [
-                '--provider' => 'Kordy\\Ticketit\\TicketitServiceProvider',
+                '--provider' => 'Umark\\Ticketit\\TicketitServiceProvider',
                 '--tag'      => ['db'],
             ]);
             Artisan::call('migrate');

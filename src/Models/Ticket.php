@@ -1,11 +1,11 @@
 <?php
 
-namespace Kordy\Ticketit\Models;
+namespace Umark\Ticketit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Date\Date;
-use Kordy\Ticketit\Traits\ContentEllipse;
-use Kordy\Ticketit\Traits\Purifiable;
+use Umark\Ticketit\Traits\ContentEllipse;
+use Umark\Ticketit\Traits\Purifiable;
 
 class Ticket extends Model
 {
@@ -57,7 +57,7 @@ class Ticket extends Model
      */
     public function status()
     {
-        return $this->belongsTo('Kordy\Ticketit\Models\Status', 'status_id');
+        return $this->belongsTo('Umark\Ticketit\Models\Status', 'status_id');
     }
 
     /**
@@ -67,7 +67,7 @@ class Ticket extends Model
      */
     public function priority()
     {
-        return $this->belongsTo('Kordy\Ticketit\Models\Priority', 'priority_id');
+        return $this->belongsTo('Umark\Ticketit\Models\Priority', 'priority_id');
     }
 
     /**
@@ -77,7 +77,7 @@ class Ticket extends Model
      */
     public function category()
     {
-        return $this->belongsTo('Kordy\Ticketit\Models\Category', 'category_id');
+        return $this->belongsTo('Umark\Ticketit\Models\Category', 'category_id');
     }
 
     /**
@@ -97,7 +97,7 @@ class Ticket extends Model
      */
     public function agent()
     {
-        return $this->belongsTo('Kordy\Ticketit\Models\Agent', 'agent_id');
+        return $this->belongsTo('Umark\Ticketit\Models\Agent', 'agent_id');
     }
 
     /**
@@ -107,7 +107,7 @@ class Ticket extends Model
      */
     public function comments()
     {
-        return $this->hasMany('Kordy\Ticketit\Models\Comment', 'ticket_id');
+        return $this->hasMany('Umark\Ticketit\Models\Comment', 'ticket_id');
     }
 
 //    /**
@@ -117,7 +117,7 @@ class Ticket extends Model
     //     */
     //    public function audits()
     //    {
-    //        return $this->hasMany('Kordy\Ticketit\Models\Audit', 'ticket_id');
+    //        return $this->hasMany('Umark\Ticketit\Models\Audit', 'ticket_id');
     //    }
     //
 

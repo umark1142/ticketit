@@ -1,5 +1,5 @@
 {
-    "name": "kordy/ticketit",
+    "name": "umark1142/ticketit",
     "description": "A simple helpdesk tickets system for Laravel 5.1 – 5.8 and 6.* - 7.* - 8.* which integrates smoothly with Laravel default users and auth system",
     "type": "laravel-package",
     "keywords": ["laravel","helpdesk", "ticket", "support"],
@@ -16,17 +16,17 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Ahmed Kordy",
-            "email": "ahmed@kordy.info"
+            "name": "umark1142",
+            "email": "umark1142@gmail.com"
         },
         {
-            "name": "Balázs Dura-Kovács",
-            "homepage": "https://gitlab.com/balping"
+            "name": "umark1142",
+            "homepage": "https://github.com/umark1142"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Kordy\\Ticketit\\": "src"
+            "Umark\\Ticketit\\": "src"
         }
     }
 }

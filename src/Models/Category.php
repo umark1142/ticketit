@@ -1,6 +1,6 @@
 <?php
 
-namespace Kordy\Ticketit\Models;
+namespace Umark\Ticketit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,7 +24,7 @@ class Category extends Model
      */
     public function tickets()
     {
-        return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'category_id');
+        return $this->hasMany('Umark\Ticketit\Models\Ticket', 'category_id');
     }
 
     /**
@@ -34,6 +34,6 @@ class Category extends Model
      */
     public function agents()
     {
-        return $this->belongsToMany('\Kordy\Ticketit\Models\Agent', 'ticketit_categories_users', 'category_id', 'user_id');
+        return $this->belongsToMany('\Umark\Ticketit\Models\Agent', 'ticketit_categories_users', 'category_id', 'user_id');
     }
 }

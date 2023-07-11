@@ -1,8 +1,8 @@
 <?php
 
-namespace Kordy\Ticketit\Helpers;
+namespace Umark\Ticketit\Helpers;
 
-use Kordy\Ticketit\Models\Setting;
+use Umark\Ticketit\Models\Setting;
 use Illuminate\Support\Arr;
 
 class EditorLocale
